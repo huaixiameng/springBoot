@@ -20,7 +20,7 @@ public class RequestController {
         return "success";
     }
 
-    // http://localhost:8080/res/user/2/zhangsan
+    // http://localhost:8080/res/getUser/2/zhangsan
     @GetMapping("/getUser/{id}/{name}")
     public String testPathVariable(@PathVariable(value = "id") Integer id, @PathVariable String name) {
         System.out.println("获取到的id为：" + id);

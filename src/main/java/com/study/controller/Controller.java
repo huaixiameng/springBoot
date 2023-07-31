@@ -1,11 +1,12 @@
 package com.study.controller;
 
-import com.study.pojo.MicroServiceUrl;
+import com.study.config.MicroServiceUrl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -30,8 +31,6 @@ public class Controller {
     @GetMapping("/log")
     public String index() {
 
-        System.out.println("sun");
-
         logger.debug("=====测试日志debug级别打印====");
         logger.info("======测试日志info级别打印=====");
         logger.error("=====测试日志error级别打印====");
@@ -46,9 +45,10 @@ public class Controller {
 
     /**
      * 配置类，需要引入依赖
+     *
      * @return str
      */
-    @RequestMapping("/config")
+    @RequestMapping(value = "/config", method = RequestMethod.GET)
     public String testConfig() {
         logger.info("=====获取的订单服务地址为：{}", microServiceUrl.getOrderUrl());
         logger.info("=====获取的用户服务地址为：{}", microServiceUrl.getUserUrl());
