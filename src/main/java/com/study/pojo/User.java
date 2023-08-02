@@ -24,6 +24,9 @@ public class User {
     private String AA;
 
     @ApiModelProperty(value = "用户密码")
+    private String BB;
+
+    @ApiModelProperty(value = "用户密码")
     private String CC;
 
 }
