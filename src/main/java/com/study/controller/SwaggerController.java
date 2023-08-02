@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * http://localhost:8080/swagger-ui.html#/
+ */
 @RestController
 @RequestMapping("/swagger")
 @Api(value = "Swagger2 在线接口文档")

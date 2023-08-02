@@ -1,12 +1,15 @@
 package com.study.controller;
 
+import com.study.config.JsonResult;
 import com.study.config.MicroServiceUrl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -28,6 +31,10 @@ public class Controller {
         return String.format("端口号: %s!", serverPort);
     }
 
+    /**
+     * 日志测试
+     * @return
+     */
     @GetMapping("/log")
     public String index() {
 
