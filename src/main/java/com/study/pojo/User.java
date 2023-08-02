@@ -20,13 +20,4 @@ public class User {
     @ApiModelProperty(value = "用户密码")
     private String password;
 
-    @ApiModelProperty(value = "用户密码")
-    private String AA;
-
-    @ApiModelProperty(value = "用户密码")
-    private String BB;
-
-    @ApiModelProperty(value = "用户密码")
-    private String CC;
-
 }
