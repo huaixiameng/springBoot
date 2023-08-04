@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -40,6 +41,12 @@ public class Controller {
     @RequestMapping("/getUserById/{id}")
     public JsonResult getUserById(@PathVariable String id) {
         return new JsonResult(userService.getUserById(id));
+    }
+
+    @PostMapping("/insertUser")
+    public JsonResult insertUser(@RequestBody User user) {
+        userService.insertUser(user);
+        return new JsonResult().success();
     }
 
     /**

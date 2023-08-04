@@ -20,6 +20,12 @@ public class JsonResult<T> {
         this.msg = "操作成功！";
     }
 
+    public JsonResult success(){
+        this.code = "0";
+        this.msg = "success";
+        return this;
+    }
+
     /**
      * 若没有数据返回，可以人为指定状态码和提示信息
      * @param code

@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @ApiModel(value = "用户实体类")
 public class User {
     @ApiModelProperty(value = "用户唯一标识")
-    private String id;
+    private int id;
 
     @ApiModelProperty(value = "用户姓名")
     private String username;
@@ -32,7 +32,7 @@ public class User {
     @ApiModelProperty(value = "性别")
     private String sex;
 
-    public User(String id, String username, String password) {
+    public User(int id, String username, String password) {
         this.id = id;
         this.username = username;
         this.password = password;

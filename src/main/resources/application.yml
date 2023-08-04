@@ -33,13 +33,13 @@ logging:
   level:
     com.study.dao: trace #打印出sql语句
 
-# 配置多个微服务的地址
+# 配置类 获取所有配置
 url:
-  # 订单微服务的地址
+  # 地址
   orderUrl: http://localhost:8002
-  # 用户微服务的地址
+  # 地址
   userUrl: http://localhost:8003
-  # 购物车微服务的地址
+  # 地址
   shoppingUrl: http://localhost:8004
 
 

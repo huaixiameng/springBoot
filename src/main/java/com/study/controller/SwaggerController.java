@@ -20,7 +20,7 @@ public class SwaggerController {
 
     @GetMapping("/get/{id}")
     @ApiOperation(value = "根据用户唯一标识获取用户信息")
-    public JsonResult getUserInfo(@PathVariable @ApiParam(value = "用户唯一标识") String id) {
+    public JsonResult getUserInfo(@PathVariable @ApiParam(value = "用户唯一标识") int id) {
         // 模拟数据库中根据id获取User信息
         User user = new User(id, "HuaiMeng", "123456");
         return new JsonResult(user);
