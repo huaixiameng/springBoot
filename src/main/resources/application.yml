@@ -1,10 +1,32 @@
 server:
   port: 8080
 
-#spring:
-#  profiles:
-#    active: dev
+# 数据库地址
+datasource:
+  url: localhost:3306/localdata
 
+spring:
+#  profiles:
+#    active: dev #指定配置文件
+  datasource: # 数据库配置
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${datasource.url}?useSSL=false&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&maxReconnects=10&serverTimezone=Asia/Shanghai
+    username: root
+    password: 7634
+    hikari:
+      maximum-pool-size: 10 # 最大连接池数
+      max-lifetime: 1770000
+
+mybatis:
+  # 指定别名设置的包为所有entity
+  type-aliases-package: com.study.pojo
+  configuration:
+    map-underscore-to-camel-case: true # 驼峰命名规范
+  mapper-locations: # mapper映射文件位置
+    - classpath:mapper/*.xml
+
+
+# 加载日志的配置文件
 logging:
   config:
     classpath: logging-config.xml

@@ -2,10 +2,13 @@ package com.study.controller;
 
 import com.study.config.JsonResult;
 import com.study.config.MicroServiceUrl;
+import com.study.pojo.User;
+import com.study.server.UserServer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -26,9 +29,17 @@ public class Controller {
     @Value("${server.port}")
     private String serverPort;
 
+    @Resource
+    private UserServer userService;
+
     @GetMapping("/hello")
     public String hello() {
         return String.format("端口号: %s!", serverPort);
+    }
+
+    @RequestMapping("/getUserById/{id}")
+    public JsonResult getUserById(@PathVariable String id) {
+        return new JsonResult(userService.getUserById(id));
     }
 
     /**
