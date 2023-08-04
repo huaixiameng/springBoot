@@ -23,6 +23,8 @@ public class UserServerImpl implements UserServer {
 
     /**
      * Transactional 开启事务
+     * Spring Boot 默认的事务规则是遇到运行异常（RuntimeException）和程序错误（Error）才会回滚
+     * try…catch，会导致异常被 ”吃“ 掉，事务无法回滚
      * @param user
      */
     @Override
