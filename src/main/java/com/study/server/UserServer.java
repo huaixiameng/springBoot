@@ -6,4 +6,6 @@ public interface UserServer {
     User getUserById(String id);
 
     void insertUser(User user);
+
+    User getUser();
 }
