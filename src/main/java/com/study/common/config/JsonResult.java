@@ -4,11 +4,11 @@ import lombok.Data;
 
 /**
  * json统一封装
- * @param <T>
+ * @param
  */
 @Data
-public class JsonResult<T> {
-    private T data;
+public class JsonResult {
+    private Object data;
     private String code;
     private String msg;
 
@@ -40,7 +40,7 @@ public class JsonResult<T> {
      * 有数据返回时，状态码为0，默认提示信息为：操作成功！
      * @param data
      */
-    public JsonResult(T data) {
+    public JsonResult(Object data) {
         this.data = data;
         this.code = "0";
         this.msg = "操作成功！";
@@ -51,7 +51,7 @@ public class JsonResult<T> {
      * @param data
      * @param msg
      */
-    public JsonResult(T data, String msg) {
+    public JsonResult(Object data, String msg) {
         this.data = data;
         this.code = "0";
         this.msg = msg;
