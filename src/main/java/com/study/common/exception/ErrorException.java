@@ -1,4 +1,4 @@
-package com.study.exception;
+package com.study.common.exception;
 
 
 /**

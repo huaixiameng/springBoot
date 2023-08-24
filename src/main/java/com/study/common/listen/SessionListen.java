@@ -1,4 +1,4 @@
-package com.study.config.listen;
+package com.study.common.listen;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

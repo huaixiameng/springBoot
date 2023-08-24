@@ -1,4 +1,4 @@
-package com.study.aop;
+package com.study.common.aop;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.Signature;

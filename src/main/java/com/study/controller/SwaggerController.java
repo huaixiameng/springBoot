@@ -1,6 +1,6 @@
 package com.study.controller;
 
-import com.study.config.JsonResult;
+import com.study.common.config.JsonResult;
 import com.study.pojo.User;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

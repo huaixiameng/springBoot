@@ -1,8 +1,8 @@
 package com.study.controller;
 
-import com.study.config.JsonResult;
-import com.study.exception.ErrorException;
-import com.study.exception.CodeEnum;
+import com.study.common.config.JsonResult;
+import com.study.common.exception.ErrorException;
+import com.study.common.exception.CodeEnum;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;

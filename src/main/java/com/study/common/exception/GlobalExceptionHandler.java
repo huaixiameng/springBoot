@@ -1,6 +1,6 @@
-package com.study.exception;
+package com.study.common.exception;
 
-import com.study.config.JsonResult;
+import com.study.common.config.JsonResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;

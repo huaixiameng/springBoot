@@ -1,4 +1,4 @@
-package com.study.config.listen;
+package com.study.common.listen;
 
 import com.study.pojo.User;
 import com.study.server.UserServer;

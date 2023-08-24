@@ -1,8 +1,7 @@
 package com.study.controller;
 
-import com.study.config.listen.OwnListen.ListenService;
+import com.study.common.listen.OwnListen.ListenService;
 import com.study.pojo.User;
-import com.study.server.UserServer;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

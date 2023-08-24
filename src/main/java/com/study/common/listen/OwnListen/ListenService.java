@@ -1,4 +1,4 @@
-package com.study.config.listen.OwnListen;
+package com.study.common.listen.OwnListen;
 
 import com.study.pojo.User;
 import lombok.extern.slf4j.Slf4j;
