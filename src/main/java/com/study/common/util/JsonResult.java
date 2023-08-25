@@ -1,4 +1,4 @@
-package com.study.common.config;
+package com.study.common.util;
 
 import lombok.Data;
 

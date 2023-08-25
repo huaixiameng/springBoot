@@ -1,8 +1,7 @@
 package com.study.controller;
 
-import com.study.common.config.JsonResult;
-import com.study.common.config.MicroServiceUrl;
-import com.study.common.interceptor.UnInterception;
+import com.study.common.util.JsonResult;
+import com.study.common.util.MicroServiceUrl;
 import com.study.pojo.User;
 import com.study.server.UserServer;
 import org.slf4j.Logger;
@@ -17,6 +16,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 @RestController
 @RequestMapping("/sun")
@@ -35,6 +38,14 @@ public class Controller {
 
     @GetMapping("/hello")
     public String hello() {
+        Path path = Paths.get("D:/Downloads/水浒传.txt");
+        String data = null;
+        try {
+            data = Files.readString(path);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println(data);
         return String.format("端口号: %s!", serverPort);
     }
 

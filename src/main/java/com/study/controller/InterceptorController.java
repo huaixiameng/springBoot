@@ -1,6 +1,6 @@
 package com.study.controller;
 
-import com.study.common.config.JsonResult;
+import com.study.common.util.JsonResult;
 import com.study.common.interceptor.UnInterception;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

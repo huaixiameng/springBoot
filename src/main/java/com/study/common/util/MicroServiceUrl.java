@@ -1,11 +1,11 @@
-package com.study.common.config;
+package com.study.common.util;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 /**
- * 配置类,引入yml文件内信息
+ * 配置类,引入yml文件内信息 根据注解将yml信息映射到类
  */
 @Component
 @Data

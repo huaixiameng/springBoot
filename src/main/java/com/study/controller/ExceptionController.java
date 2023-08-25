@@ -1,6 +1,6 @@
 package com.study.controller;
 
-import com.study.common.config.JsonResult;
+import com.study.common.util.JsonResult;
 import com.study.common.exception.ErrorException;
 import com.study.common.exception.CodeEnum;
 import org.slf4j.Logger;
