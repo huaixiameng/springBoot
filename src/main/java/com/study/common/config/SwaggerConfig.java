@@ -1,4 +1,4 @@
-package com.study.common.util;
+package com.study.common.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
