@@ -1,9 +1,8 @@
 package com.study.controller;
 
-import com.alibaba.fastjson.JSON;
 import com.study.common.util.JsonResult;
 import com.study.common.util.RedisUtil;
-import com.study.pojo.User;
+import com.study.pojo.Student;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,7 +26,7 @@ public class RedisController {
         //redisUtil.setString("name","sun");
         log.info("String存储字符串 {}",redisUtil.getString("name"));
 
-        User user = new User(1,"ss","7634");
+        Student user = new Student("1","ss","7634");
         //redisUtil.setString("user", JSON.toJSONString(user));
         log.info("String存储对象 {}",redisUtil.getString("user"));
 

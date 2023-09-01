@@ -1,6 +1,6 @@
 package com.study.common.listen;
 
-import com.study.pojo.User;
+import com.study.pojo.Student;
 import com.study.server.UserServer;
 import com.study.server.impl.UserServerImpl;
 import org.springframework.context.ApplicationContext;
@@ -23,7 +23,7 @@ public class ApplicationListen implements ApplicationListener<ContextRefreshedEv
         ApplicationContext applicationContext = contextRefreshedEvent.getApplicationContext();
         // 获取对应的service
         UserServer userServer = applicationContext.getBean(UserServerImpl.class);
-        User user = userServer.getUser();
+        Student user = userServer.getUser();
         // 获取application域对象，将查到的信息放到application域中
         ServletContext application = applicationContext.getBean(ServletContext.class);
         application.setAttribute("userApplication", user);

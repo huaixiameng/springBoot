@@ -1,7 +1,7 @@
 package com.study.controller;
 
 import com.study.common.listen.OwnListen.ListenService;
-import com.study.pojo.User;
+import com.study.pojo.Student;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,9 +23,9 @@ public class ListenerController {
      * @return
      */
     @GetMapping("/user")
-    public User getUser(HttpServletRequest request) {
+    public Student getUser(HttpServletRequest request) {
         ServletContext application = request.getServletContext();
-        return (User) application.getAttribute("userApplication");
+        return (Student) application.getAttribute("userApplication");
     }
 
     /**
@@ -75,7 +75,7 @@ public class ListenerController {
      */
     @GetMapping("/request2")
     public String getRequestInfo2(HttpServletRequest request) {
-        User user = new User(1,"sun","1234567");
+        Student user = new Student("1","sun","1234567");
         listenService.createUser(user);
         return "success";
     }

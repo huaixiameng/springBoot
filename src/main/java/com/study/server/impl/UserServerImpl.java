@@ -1,7 +1,7 @@
 package com.study.server.impl;
 
 import com.study.dao.UserMapper;
-import com.study.pojo.User;
+import com.study.pojo.Student;
 import com.study.server.UserServer;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,9 +15,9 @@ public class UserServerImpl implements UserServer {
     UserMapper userMapper;
 
     @Override
-    public User getUserById(String id) {
-        User user = userMapper.getUserById(id);
-        User user1 = userMapper.getUser(id);
+    public Student getUserById(String id) {
+        Student user = userMapper.getUserById(id);
+        Student user1 = userMapper.getUser(id);
         return user1;
     }
 
@@ -29,7 +29,7 @@ public class UserServerImpl implements UserServer {
      */
     @Override
     @Transactional
-    public void insertUser(User user) {
+    public void insertUser(Student user) {
         userMapper.insertUser(user);
         // 手动抛出异常
         throw new RuntimeException();
@@ -39,8 +39,8 @@ public class UserServerImpl implements UserServer {
      * 获取用户信息
      * @return
      */
-    public User getUser() {
+    public Student getUser() {
         // 实际中会根据具体的业务场景，从数据库中查询对应的信息
-        return new User(1, "HuaiMeng", "123456");
+        return new Student("1", "HuaiMeng", "123456");
     }
 }

@@ -1,6 +1,6 @@
 package com.study.common.listen.OwnListen;
 
-import com.study.pojo.User;
+import com.study.pojo.Student;
 import org.springframework.context.ApplicationEvent;
 
 /**
@@ -10,18 +10,18 @@ import org.springframework.context.ApplicationEvent;
  */
 public class MyEvent extends ApplicationEvent {
 
-    private User user;
+    private Student user;
 
-    public MyEvent(Object source, User user) {
+    public MyEvent(Object source, Student user) {
         super(source);
         this.user = user;
     }
 
-    public User getUser() {
+    public Student getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(Student user) {
         this.user = user;
     }
 }

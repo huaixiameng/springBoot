@@ -1,11 +1,11 @@
 package com.study.server;
 
-import com.study.pojo.User;
+import com.study.pojo.Student;
 
 public interface UserServer {
-    User getUserById(String id);
+    Student getUserById(String id);
 
-    void insertUser(User user);
+    void insertUser(Student user);
 
-    User getUser();
+    Student getUser();
 }

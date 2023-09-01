@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
  * Topic消息消费者
  * @author shengwu ni
  */
-@Service
+//@Service
 public class TopicConsumer {
 
     /**

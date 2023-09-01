@@ -2,7 +2,7 @@ package com.study.controller;
 
 import com.study.common.util.JsonResult;
 import com.study.common.util.MicroServiceUrl;
-import com.study.pojo.User;
+import com.study.pojo.Student;
 import com.study.server.UserServer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -55,7 +55,7 @@ public class Controller {
     }
 
     @PostMapping("/insertUser")
-    public JsonResult insertUser(@RequestBody User user) {
+    public JsonResult insertUser(@RequestBody Student user) {
         userService.insertUser(user);
         return new JsonResult().success();
     }

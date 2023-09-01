@@ -1,6 +1,6 @@
 package com.study.dao;
 
-import com.study.pojo.User;
+import com.study.pojo.Student;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 
@@ -12,16 +12,16 @@ public interface UserMapper {
      * @param id
      * @return
      */
-    User getUserById(String id);
+    Student getUserById(String id);
 
     /**
      * 基于注解
      * @param id
      * @return
      */
-    @Select("select * from user where id = #{id}")
-    User getUser(String id);
+    @Select("select * from student where id = #{id}")
+    Student getUser(String id);
 
-    @Insert("insert into user (username, password) values (#{username}, #{password})")
-    Integer insertUser(User user);
+    @Insert("insert into student (username, password) values (#{username}, #{password})")
+    Integer insertUser(Student user);
 }
