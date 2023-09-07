@@ -1,8 +1,7 @@
 package com.study.common.mq;
 
-import com.study.common.config.ActiveMqConfig;
+import com.study.common.mq.config.ActiveMqConfig;
 import org.springframework.jms.annotation.JmsListener;
-import org.springframework.stereotype.Service;
 
 /**
  * Topic消息消费者

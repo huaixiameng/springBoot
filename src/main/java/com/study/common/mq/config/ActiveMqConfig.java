@@ -1,4 +1,4 @@
-package com.study.common.config;
+package com.study.common.mq.config;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.activemq.command.ActiveMQQueue;
